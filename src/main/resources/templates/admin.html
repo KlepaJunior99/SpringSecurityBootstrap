@@ -107,7 +107,7 @@
                                     <input name="password" value="" type="text" class="form-control mx-auto" style="width: 250px;" placeholder="Новый пароль"></label>
                                   <label class="form-label d-block mx-auto pt-1 mt-3 mb-0 text-center fs-5 fw-bold">Role
                                     <select name="roles" th:value="${person.roles}" size="2" multiple required class="form-select mx-auto" aria-label="Default select" style="width: 250px;">
-                                      <th:block th:if="${person.roles.size()<3}">
+                                      <th:block th:if="${person.roles.size()<2}">
                                         <option value="1" selected th:each="role : ${person.roles}" th:if="${role.name=='ROLE_ADMIN'}">ADMIN</option>
                                         <option value="1" th:each="role : ${person.roles}" th:if="${role.name!='ROLE_ADMIN'}">ADMIN</option>
                                         <option value="2" selected th:each="role : ${person.roles}" th:if="${role.name=='ROLE_USER'}">USER</option>
